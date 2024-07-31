@@ -1,0 +1,25 @@
+@import '../variable';
+@import '../mixin';
+.main {
+    margin-bottom: rem(30);
+}
+.heading {
+    &::after {
+        content:"";
+        width: rem(30);
+        height: rem(3);
+        margin-top: rem(2);
+        background-color: $theme_color;
+        @include prefix(border-radius, rem(3));
+    }
+}
+.text {
+    width: rem(650);
+    max-width: 100%;
+    margin: rem(8) auto 0;
+}
+@include responsive(md) {
+    .main {
+        margin-bottom: rem(23);
+    }
+}

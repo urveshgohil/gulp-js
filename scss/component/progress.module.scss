@@ -1,0 +1,18 @@
+@import '../variable';
+@import '../mixin';
+.value {
+    &::after {
+        content:"%";
+    }
+}
+.main {
+    position: relative;
+	height: rem(15);
+	background-color: $black_color_transparent;
+    @extend .border-r10;
+}
+.bar {
+    height: 100%;
+    background-color: $theme_color;
+    @extend .border-r10, %transition;
+}

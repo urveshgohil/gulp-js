@@ -1,0 +1,30 @@
+@import '../variable';
+@import '../mixin';
+
+.main {
+    background-color: $black_color_transparent;
+    @extend .border-r15;
+}
+.header {
+    padding: rem(20);
+    border-bottom: rem(1) solid rgba($black, 0.1);
+}
+.body {
+    padding: rem(20);
+    ul {
+        li {
+            position: relative;
+            padding-left: rem(14);
+            &::before {
+                content:"";
+                position: absolute;
+                left: 0;
+                top: rem(10);
+                width: rem(7);
+                height: rem(7);
+                @include circle(true);
+                background-color: $theme_color;
+            }
+        }
+    }
+}

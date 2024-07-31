@@ -1,0 +1,10 @@
+@import '../variable';
+@import '../mixin';
+
+// Responsive
+@media only screen and (max-width: rem(1024)){
+
+}
+@include responsive(md) {
+
+}
